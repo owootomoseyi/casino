@@ -128,7 +128,23 @@ onUnmounted(() => {
   .page-content {
     padding: var(--space-md);
     padding-top: calc(var(--header-height) + var(--space-md));
+    padding-bottom: calc(var(--mobile-nav-height) + var(--space-lg));
+  }
+}
+
+@media (max-width: 576px) {
+  .page-content {
+    padding: var(--space-sm);
+    padding-top: calc(var(--header-height) + var(--space-sm));
     padding-bottom: calc(var(--mobile-nav-height) + var(--space-md));
+  }
+}
+
+@media (max-width: 480px) {
+  .page-content {
+    padding: var(--space-xs);
+    padding-top: calc(var(--header-height) + var(--space-xs));
+    padding-bottom: calc(var(--mobile-nav-height) + var(--space-sm));
   }
 }
 </style>
