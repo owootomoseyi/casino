@@ -454,12 +454,21 @@ const liveBets = computed(() => gamesStore.liveBets)
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
+  .home-page {
+    gap: var(--space-xl);
+  }
+  
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
+    padding: var(--space-lg) 0;
   }
   
   .hero-content {
@@ -467,15 +476,26 @@ const liveBets = computed(() => gamesStore.liveBets)
   }
   
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   
   .brand-name {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   
   .hero-subtitle {
     text-align: center;
+    font-size: 1rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-sm);
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
   }
   
   .hero-visual {
@@ -485,14 +505,195 @@ const liveBets = computed(() => gamesStore.liveBets)
   .hero-stats {
     justify-content: center;
     flex-wrap: wrap;
+    gap: var(--space-lg);
+  }
+  
+  .hero-stats .stat {
+    text-align: center;
+    min-width: 80px;
+  }
+  
+  .hero-stats .stat-value {
+    font-size: 1.25rem;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+  
+  .section-title {
+    font-size: 1.25rem;
   }
   
   .games-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .game-card {
+    padding: var(--space-md);
+  }
+  
+  .game-icon {
+    font-size: 2.5rem;
+  }
+  
+  .game-name {
+    font-size: 1rem;
   }
   
   .features-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .feature-card {
+    padding: var(--space-lg);
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+  }
+  
+  .cta-section {
+    padding: var(--space-xl);
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .cta-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-page {
+    gap: var(--space-lg);
+  }
+  
+  .hero {
+    padding: var(--space-md) 0;
+  }
+  
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .brand-name {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9375rem;
+  }
+  
+  .hero-stats {
+    gap: var(--space-md);
+  }
+  
+  .hero-stats .stat-value {
+    font-size: 1.125rem;
+  }
+  
+  .hero-stats .stat-label {
+    font-size: 0.75rem;
+  }
+  
+  .section-title {
+    font-size: 1.125rem;
+  }
+  
+  .see-all {
+    font-size: 0.8125rem;
+  }
+  
+  .game-icon {
+    font-size: 2rem;
+  }
+  
+  .game-desc {
+    font-size: 0.8125rem;
+  }
+  
+  .feature-icon {
+    font-size: 1.75rem;
+  }
+  
+  .feature-title {
+    font-size: 1rem;
+  }
+  
+  .feature-desc {
+    font-size: 0.8125rem;
+  }
+  
+  .cta-section {
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+  }
+  
+  .cta-title {
+    font-size: 1.25rem;
+  }
+  
+  .cta-subtitle {
+    font-size: 0.9375rem;
+    margin-bottom: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.375rem;
+  }
+  
+  .brand-name {
+    font-size: 1.75rem;
+  }
+  
+  .hero-stats .stat {
+    min-width: 70px;
+  }
+  
+  .hero-stats .stat-value {
+    font-size: 1rem;
+  }
+  
+  .game-card {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-md);
+  }
+  
+  .game-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+  
+  .game-info {
+    text-align: left;
+  }
+  
+  .game-meta {
+    display: none;
+  }
+  
+  .feature-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-md);
+    text-align: left;
+  }
+  
+  .feature-icon {
+    font-size: 1.5rem;
+    min-width: 40px;
+    margin-bottom: 0;
   }
 }
 </style>
